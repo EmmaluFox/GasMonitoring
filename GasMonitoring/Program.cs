@@ -1,4 +1,8 @@
 ﻿using System;
+using Amazon.S3;
+
+using GasMonitoring.AWS;
+
 
 namespace GasMonitoring
 {
@@ -6,7 +10,11 @@ namespace GasMonitoring
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var s3Client = new AmazonS3Client();
+            var locationsFetcher = new LocationsFetcher();
+            var locations = locationsFetcher.FetchLocations(s3Client);
+            Console.Write(locations);
         }
+     
     }
 }

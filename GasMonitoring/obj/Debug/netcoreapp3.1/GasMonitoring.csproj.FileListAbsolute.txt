@@ -1,0 +1,13 @@
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.exe
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.deps.json
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.runtimeconfig.json
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.runtimeconfig.dev.json
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.dll
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\GasMonitoring.pdb
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.csprojAssemblyReference.cache
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.csproj.CoreCompileInputs.cache
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.AssemblyInfoInputs.cache
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.AssemblyInfo.cs
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.dll
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.pdb
+C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.genruntimeconfig.cache

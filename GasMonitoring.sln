@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasMonitoring", "GasMonitoring\GasMonitoring.csproj", "{A92B9242-94E1-4496-B8D4-38D5A0FD63D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasMon.Tests", "GasMon.Tests\GasMon.Tests.csproj", "{675E34BA-5798-4160-AB45-CC208A0D51AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A92B9242-94E1-4496-B8D4-38D5A0FD63D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92B9242-94E1-4496-B8D4-38D5A0FD63D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92B9242-94E1-4496-B8D4-38D5A0FD63D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92B9242-94E1-4496-B8D4-38D5A0FD63D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675E34BA-5798-4160-AB45-CC208A0D51AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675E34BA-5798-4160-AB45-CC208A0D51AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675E34BA-5798-4160-AB45-CC208A0D51AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675E34BA-5798-4160-AB45-CC208A0D51AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

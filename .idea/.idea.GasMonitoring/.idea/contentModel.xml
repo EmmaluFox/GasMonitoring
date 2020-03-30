@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Training\GasMonitoring" t="IncludeFlat">
+      <e p="GasMon.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GasMon.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="GasMon.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTest1.cs" t="Include" />
+      </e>
+      <e p="GasMonitoring" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GasMonitoring.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="GasMonitoring.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="GasMonitoring.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\EmmFox\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\EmmFox\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\EmmFox\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\EmmFox\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\EmmFox\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\EmmFox\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\EmmFox\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\EmmFox\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\EmmFox\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\EmmFox\.Rider2019.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\EmmFox\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\EmmFox\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_GasMonitoring.660071293.00" t="ExcludeRecursive" />
+  </component>
+</project>

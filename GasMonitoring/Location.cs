@@ -1,4 +1,6 @@
-﻿namespace GasMonitoring
+﻿using System.Data.Common;
+
+namespace GasMonitoring
 {
     public class Location
     {

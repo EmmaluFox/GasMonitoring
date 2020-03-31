@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Amazon.S3;
 
@@ -13,8 +14,12 @@ namespace GasMonitoring
         {
             var s3Client = new AmazonS3Client();
             var locationsFetcher = new LocationsFetcher(s3Client);
-            var locations = await locationsFetcher.FetchLocations();
-            Console.Write(locations);
+            var locationsTask = await locationsFetcher.FetchLocations();
+            foreach (var location in locationsTask)
+            {
+                Console.Write(location.Id, location.X, location.Y);
+            }
+           
         }
      
     }

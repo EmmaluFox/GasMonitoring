@@ -16,10 +16,11 @@
       </e>
       <e p="GasMonitoring" t="IncludeRecursive">
         <e p="AWS" t="Include">
-          <e p="AmazonS3Client.cs" t="Include" />
+          <e p="LocationsFetcher.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="GasMonitoring.csproj" t="IncludeRecursive" />
+        <e p="Location.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

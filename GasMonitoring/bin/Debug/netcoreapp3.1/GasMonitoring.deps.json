@@ -11,6 +11,7 @@
           "AWS.Net": "1.0.0",
           "AWSSDK.Core": "3.3.105.6",
           "AWSSDK.S3": "3.3.110.43",
+          "AWSSDK.SimpleNotificationService": "3.3.101.141",
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
@@ -58,6 +59,17 @@
           "lib/net45/AWSSDK.SimpleEmail.dll": {
             "assemblyVersion": "3.1.0.0",
             "fileVersion": "3.1.3.0"
+          }
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.3.101.141": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.105.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.141"
           }
         }
       },
@@ -115,6 +127,13 @@
       "sha512": "sha512-a1CgGIbf5heFunR1esLlysQ4w5gjjCrZ2xOcu+M1AGBvK82f4k0cmAFGIs+fz0nFaACelj01od1LmjrVZiOWmA==",
       "path": "awssdk.simpleemail/3.1.3",
       "hashPath": "awssdk.simpleemail.3.1.3.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService/3.3.101.141": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IaBobRlQXs8G84nPbKSiMsFRfo/5tH5Hta/eCOCbwPqTNPDlD50FoqaA0rrz9Pv27DauHJTfCXemVCNyNxJyxQ==",
+      "path": "awssdk.simplenotificationservice/3.3.101.141",
+      "hashPath": "awssdk.simplenotificationservice.3.3.101.141.nupkg.sha512"
     },
     "AWSSDK.SQS/3.1.0.6": {
       "type": "package",

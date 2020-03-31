@@ -18,3 +18,4 @@ C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\AWSSDK.SimpleEma
 C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\AWSSDK.SQS.dll
 C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Training\GasMonitoring\GasMonitoring\obj\Debug\netcoreapp3.1\GasMonitoring.csproj.CopyComplete
+C:\Training\GasMonitoring\GasMonitoring\bin\Debug\netcoreapp3.1\AWSSDK.SimpleNotificationService.dll

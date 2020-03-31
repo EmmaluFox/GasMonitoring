@@ -32,10 +32,10 @@ namespace GasMonitoring.AWS
             var queueUrl = sqsClient.CreateQueueAsync(createQueueRequest.QueueName).Result.QueueUrl;
             await snsClient.SubscribeQueueAsync(topicArn, sqsClient, queueUrl);
 
-            var messageTask = sqsClient.ReceiveMessageAsync(new ReceiveMessageRequest
+            Task<ReceiveMessageResponse> messageTask = sqsClient.ReceiveMessageAsync(new ReceiveMessageRequest
             {
                 QueueUrl = queueUrl,
-                WaitTimeSeconds = 30
+                WaitTimeSeconds = 20
             });
             
             using var streamReader = new StreamReader(messageTask.Result.ToString());

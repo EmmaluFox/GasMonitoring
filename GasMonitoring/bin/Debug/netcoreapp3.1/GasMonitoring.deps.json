@@ -8,79 +8,75 @@
     ".NETCoreApp,Version=v3.1": {
       "GasMonitoring/1.0.0": {
         "dependencies": {
-          "AWS.Net": "1.0.0",
-          "AWSSDK.Core": "3.3.105.6",
-          "AWSSDK.S3": "3.3.110.43",
-          "AWSSDK.SimpleNotificationService": "3.3.101.141",
+          "AWSSDK.Core": "3.5.0-beta",
+          "AWSSDK.S3": "3.5.0-beta",
+          "AWSSDK.SQS": "3.5.0-beta",
+          "AWSSDK.SimpleNotificationService": "3.5.0-beta",
+          "Amazon.Lambda.RuntimeSupport": "1.1.0",
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "GasMonitoring.dll": {}
         }
       },
-      "AWS.Net/1.0.0": {
-        "dependencies": {
-          "AWSSDK.S3": "3.3.110.43",
-          "AWSSDK.SQS": "3.1.0.6",
-          "AWSSDK.SimpleEmail": "3.1.3",
-          "Newtonsoft.Json": "12.0.3"
-        },
+      "Amazon.Lambda.Core/1.1.0": {
         "runtime": {
-          "lib/net45/AWS.Net.dll": {
+          "lib/netstandard2.0/Amazon.Lambda.Core.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "AWSSDK.Core/3.3.105.6": {
+      "Amazon.Lambda.RuntimeSupport/1.1.0": {
+        "dependencies": {
+          "Amazon.Lambda.Core": "1.1.0",
+          "NSwag.MSBuild": "12.0.4"
+        },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.Core.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.105.6"
+          "lib/netstandard2.0/Amazon.Lambda.RuntimeSupport.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
-      "AWSSDK.S3/3.3.110.43": {
+      "AWSSDK.Core/3.5.0-beta": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.5.0.0"
+          }
+        }
+      },
+      "AWSSDK.S3/3.5.0-beta": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.105.6"
+          "AWSSDK.Core": "3.5.0-beta"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.110.43"
+            "fileVersion": "3.5.0.0"
           }
         }
       },
-      "AWSSDK.SimpleEmail/3.1.3": {
+      "AWSSDK.SimpleNotificationService/3.5.0-beta": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.105.6"
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.SimpleEmail.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.3.0"
-          }
-        }
-      },
-      "AWSSDK.SimpleNotificationService/3.3.101.141": {
-        "dependencies": {
-          "AWSSDK.Core": "3.3.105.6"
+          "AWSSDK.Core": "3.5.0-beta"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.101.141"
+            "fileVersion": "3.5.0.0"
           }
         }
       },
-      "AWSSDK.SQS/3.1.0.6": {
+      "AWSSDK.SQS/3.5.0-beta": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.105.6"
+          "AWSSDK.Core": "3.5.0-beta"
         },
         "runtime": {
-          "lib/net45/AWSSDK.SQS.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.6"
+          "lib/netstandard2.0/AWSSDK.SQS.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.5.0.0"
           }
         }
       },
@@ -91,7 +87,8 @@
             "fileVersion": "12.0.3.23909"
           }
         }
-      }
+      },
+      "NSwag.MSBuild/12.0.4": {}
     }
   },
   "libraries": {
@@ -100,47 +97,47 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWS.Net/1.0.0": {
+    "Amazon.Lambda.Core/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cj79AmJVcRhyHy6e1w3lZHsV6vhfv/OtSNW262wgu4SNtAo4ZQ280u69WDyvdy8DdPOtu+JxRCYvZrZVkprNvQ==",
-      "path": "aws.net/1.0.0",
-      "hashPath": "aws.net.1.0.0.nupkg.sha512"
+      "sha512": "sha512-ueGId8b4DEHoVWkHDs3iAJH8IUSAUGu5AqkoI/Syl4RuByzik7lz9IjoImiGAlGhtsQV02MHNeTo04IFjS37gQ==",
+      "path": "amazon.lambda.core/1.1.0",
+      "hashPath": "amazon.lambda.core.1.1.0.nupkg.sha512"
     },
-    "AWSSDK.Core/3.3.105.6": {
+    "Amazon.Lambda.RuntimeSupport/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+hJ1ZBW0ha3h1vMWNwj6ebZdIDtOLL7e2DFoJVaXJsDtYGe3WO8i9+aJM+EZPUMrrmhil+NTZJ+wcuTNh88xWA==",
-      "path": "awssdk.core/3.3.105.6",
-      "hashPath": "awssdk.core.3.3.105.6.nupkg.sha512"
+      "sha512": "sha512-kWZDchULi4y9687J/AMfWspadQX96d1z3gsLaXrr9pIpZM8WHSWmCZ5m9RK3+AybQXfgAeJGzsSSdh0gkEC/rQ==",
+      "path": "amazon.lambda.runtimesupport/1.1.0",
+      "hashPath": "amazon.lambda.runtimesupport.1.1.0.nupkg.sha512"
     },
-    "AWSSDK.S3/3.3.110.43": {
+    "AWSSDK.Core/3.5.0-beta": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qmWc/sQLS/Kb/VmoDdZjliOwZUxRY0aB0ngekpP3UrLPrtxRCmX2ipAPG/nlUSMEMJphrJssBaP8F0DizzM8fQ==",
-      "path": "awssdk.s3/3.3.110.43",
-      "hashPath": "awssdk.s3.3.3.110.43.nupkg.sha512"
+      "sha512": "sha512-ZRFwKVPowoB87Fgof6F9Vxr/6/3TvAc7Pc17S74oUCCEbPnMLZtELqEREDiWMqkUYZxwcFrgmpML8LQl792XzA==",
+      "path": "awssdk.core/3.5.0-beta",
+      "hashPath": "awssdk.core.3.5.0-beta.nupkg.sha512"
     },
-    "AWSSDK.SimpleEmail/3.1.3": {
+    "AWSSDK.S3/3.5.0-beta": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-a1CgGIbf5heFunR1esLlysQ4w5gjjCrZ2xOcu+M1AGBvK82f4k0cmAFGIs+fz0nFaACelj01od1LmjrVZiOWmA==",
-      "path": "awssdk.simpleemail/3.1.3",
-      "hashPath": "awssdk.simpleemail.3.1.3.nupkg.sha512"
+      "sha512": "sha512-D8YSmwhaRxQ2w38Z1NPtWU3AsLhyTZrQo+CxAKGH8VaSjd6Fbn3ip2uRt50o+gaJxQ+SOdZeebh91VqcHEgLqg==",
+      "path": "awssdk.s3/3.5.0-beta",
+      "hashPath": "awssdk.s3.3.5.0-beta.nupkg.sha512"
     },
-    "AWSSDK.SimpleNotificationService/3.3.101.141": {
+    "AWSSDK.SimpleNotificationService/3.5.0-beta": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IaBobRlQXs8G84nPbKSiMsFRfo/5tH5Hta/eCOCbwPqTNPDlD50FoqaA0rrz9Pv27DauHJTfCXemVCNyNxJyxQ==",
-      "path": "awssdk.simplenotificationservice/3.3.101.141",
-      "hashPath": "awssdk.simplenotificationservice.3.3.101.141.nupkg.sha512"
+      "sha512": "sha512-FcJq8L0p9qx46/hrS805hvgrm7h+WGc3dW5KokbEiAAbeJ7PdK8pW7HcShAr0HFbzai0JXCJP3TAIulYzQZaUg==",
+      "path": "awssdk.simplenotificationservice/3.5.0-beta",
+      "hashPath": "awssdk.simplenotificationservice.3.5.0-beta.nupkg.sha512"
     },
-    "AWSSDK.SQS/3.1.0.6": {
+    "AWSSDK.SQS/3.5.0-beta": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Le9SqOuHk7IONC/bE8alyyPJ2dsVJYeiRSX0lC+6NT6VQICjFz9YDjZkAIDRTfEyh4PSaFsT1mGKL8FqedegRA==",
-      "path": "awssdk.sqs/3.1.0.6",
-      "hashPath": "awssdk.sqs.3.1.0.6.nupkg.sha512"
+      "sha512": "sha512-8dl/qIcE3x6ANlPR7pxgnaGLLSJUNLJ1I3NnvlFGoOzjjt4hlmppKJ79LNLxbKVjGKLTlC9mn/H2s3YC0tDF1g==",
+      "path": "awssdk.sqs/3.5.0-beta",
+      "hashPath": "awssdk.sqs.3.5.0-beta.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
@@ -148,6 +145,13 @@
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "NSwag.MSBuild/12.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Gqf64I2j3Y5UyxtdvPW4H8h8RgY2e6Cp6++T30/v0aXS9UhErPKg35GKz3nSKRUesjYQh7Duy3cPnDCDdGlMg==",
+      "path": "nswag.msbuild/12.0.4",
+      "hashPath": "nswag.msbuild.12.0.4.nupkg.sha512"
     }
   }
 }

@@ -20,12 +20,16 @@ namespace GasMonitoring
             Console.Write($"There are {locations.Count} locations and {messages.Count} messages in the list.");
 
             var locationsTask = await locationsFetcher.FetchLocations(setUpConnections.S3Client, setCredentials.BucketName, setCredentials.FileName);
+            var locNumber = 1;
             foreach (var location in locationsTask)
             {
+                location.Name = $"Loc {locNumber}";
                 locations.Add(location);
+                Console.WriteLine(location.Name);
                 Console.WriteLine(location.Id);
                 Console.WriteLine(location.X);
                 Console.WriteLine(location.Y);
+                locNumber += 1;
             }
             var messageFetcher = new MessageFetcher(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
             var messageTask = await messageFetcher.FetchMessages(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);

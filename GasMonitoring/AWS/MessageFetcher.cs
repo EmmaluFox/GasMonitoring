@@ -30,11 +30,8 @@ namespace GasMonitoring.AWS
                 QueueUrl = queueUrl,
                 WaitTimeSeconds = 20
             });
-            
-            using var streamReader = new StreamReader(messageTask.Result.ToString());
-            var content = streamReader.ReadToEnd();
-            var messages = JsonConvert.DeserializeObject<List<Message>>(content);
-            return messages;
+
+            return messageTask.Result.Messages;
         }
         
         

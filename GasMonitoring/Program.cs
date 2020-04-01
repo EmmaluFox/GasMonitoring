@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Amazon;
-using Amazon.S3;
-using Amazon.SimpleNotificationService;
-using Amazon.SQS;
-using Amazon.SQS.Model;
 using GasMonitoring.AWS;
 
 

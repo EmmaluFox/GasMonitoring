@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Amazon;
-using Amazon.Runtime.Internal;
-using Amazon.S3;
+﻿using Amazon.S3;
 using Amazon.SimpleNotificationService;
 using Amazon.SQS;
 using Amazon.SQS.Model;

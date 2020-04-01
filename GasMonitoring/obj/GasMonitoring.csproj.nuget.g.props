@@ -13,10 +13,9 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNSwag_MSBuild Condition=" '$(PkgNSwag_MSBuild)' == '' ">C:\Users\EmmFox\.nuget\packages\nswag.msbuild\12.0.4</PkgNSwag_MSBuild>
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.core\3.5.0-beta</PkgAWSSDK_Core>
-    <PkgAWSSDK_SQS Condition=" '$(PkgAWSSDK_SQS)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.sqs\3.5.0-beta</PkgAWSSDK_SQS>
-    <PkgAWSSDK_SimpleNotificationService Condition=" '$(PkgAWSSDK_SimpleNotificationService)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.simplenotificationservice\3.5.0-beta</PkgAWSSDK_SimpleNotificationService>
-    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.s3\3.5.0-beta</PkgAWSSDK_S3>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.core\3.3.105.7</PkgAWSSDK_Core>
+    <PkgAWSSDK_SQS Condition=" '$(PkgAWSSDK_SQS)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.sqs\3.3.102.85</PkgAWSSDK_SQS>
+    <PkgAWSSDK_SimpleNotificationService Condition=" '$(PkgAWSSDK_SimpleNotificationService)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.simplenotificationservice\3.3.101.142</PkgAWSSDK_SimpleNotificationService>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\EmmFox\.nuget\packages\awssdk.s3\3.3.110.44</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>

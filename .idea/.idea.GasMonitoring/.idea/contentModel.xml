@@ -23,13 +23,15 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="GasMonitoring.csproj" t="IncludeRecursive" />
-        <e p="Location.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="GasMonitoring.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Objects" t="Include">
+          <e p="Location.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
       </e>

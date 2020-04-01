@@ -13,6 +13,7 @@ namespace GasMonitoring.AWS
 {
     public class MessageFetcher
     {
+        private string queueUrl = "";
         public MessageFetcher(AmazonSQSClient sqsClient, AmazonSimpleNotificationServiceClient snsClient,
             string topicArn, CreateQueueRequest createQueueRequest)
         {
@@ -22,7 +23,7 @@ namespace GasMonitoring.AWS
 
         public async Task<IEnumerable<Message>> FetchMessages(AmazonSQSClient sqsClient, AmazonSimpleNotificationServiceClient snsClient, string topicArn, CreateQueueRequest createQueueRequest)
         {
-            var queueUrl = sqsClient.CreateQueueAsync(createQueueRequest.QueueName).Result.QueueUrl;
+            queueUrl = sqsClient.CreateQueueAsync(createQueueRequest.QueueName).Result.QueueUrl;
             await snsClient.SubscribeQueueAsync(topicArn, sqsClient, queueUrl);
 
             Task<ReceiveMessageResponse> messageTask = sqsClient.ReceiveMessageAsync(new ReceiveMessageRequest
@@ -32,6 +33,12 @@ namespace GasMonitoring.AWS
             });
 
             return messageTask.Result.Messages;
+        }
+
+        public DeleteQueueRequest DeleteQueue()
+        {
+            DeleteQueueRequest deleteQueue = new DeleteQueueRequest(queueUrl);
+            return deleteQueue;
         }
         
         

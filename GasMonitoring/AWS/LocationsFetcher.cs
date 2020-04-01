@@ -8,19 +8,10 @@
  {
      public class LocationsFetcher
      {
-         private const string BucketName = "gasmonitoring-locationss3bucket-pgef0qqmgwba";
-         private const string FileName = "locations.json";
-         private readonly IAmazonS3 _s3Client;
-         
 
-         public LocationsFetcher(IAmazonS3 s3Client)
+         public async Task<IEnumerable<Location>> FetchLocations(IAmazonS3 s3Client, string bucketName, string fileName)
          {
-             this._s3Client = s3Client;
-         }
-
-         public async Task<IEnumerable<Location>> FetchLocations()
-         {
-             var response = await _s3Client.GetObjectAsync(BucketName, FileName);
+             var response = await s3Client.GetObjectAsync(bucketName, fileName);
              using var streamReader = new StreamReader(response.ResponseStream);
              var content = streamReader.ReadToEnd();
              var locations = JsonConvert.DeserializeObject<List<Location>>(content);

@@ -12,11 +12,9 @@ namespace GasMonitoring
         {
             var setCredentials = new SetUpCredentials.Credentials(){BucketName = "gasmonitoring-locationss3bucket-pgef0qqmgwba", FileName = "locations.json", TopicArn = "arn:aws:sns:eu-west-2:099421490492:GasMonitoring-snsTopicSensorDataPart1-1YOM46HA51FB"};
             SetUpConnections setUpConnections = new SetUpConnections();
-           
+            
             var locationsFetcher = new LocationsFetcher();
-
             var locationsTask = await locationsFetcher.FetchLocations(setUpConnections.S3Client, setCredentials.BucketName, setCredentials.FileName);
-
             foreach (var location in locationsTask)
             {
              Console.Write(location.Id, location.X, location.Y);
@@ -27,7 +25,6 @@ namespace GasMonitoring
             foreach (var message in messageTask)
             {
              Console.Write(message.Body);
-             
             }
          
         }

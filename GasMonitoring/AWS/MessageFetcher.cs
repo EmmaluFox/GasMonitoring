@@ -7,13 +7,14 @@ using Amazon;
 using Amazon.Runtime.Internal;
 using Amazon.S3.Model;
 using Amazon.SimpleNotificationService;
+using Amazon.SimpleNotificationService.Model;
 using Amazon.SQS;
 using Amazon.SQS.Model;
 using Newtonsoft.Json;
 
 namespace GasMonitoring.AWS
 {
-    public class MessageFetcher
+    public class MessageFetcher : IDisposable
     {
         private string _queueUrl = "";
         public MessageFetcher(AmazonSQSClient sqsClient, AmazonSimpleNotificationServiceClient snsClient,
@@ -30,19 +31,27 @@ namespace GasMonitoring.AWS
             Task<ReceiveMessageResponse> messageTask = sqsClient.ReceiveMessageAsync(new ReceiveMessageRequest(_queueUrl)
             {
                 QueueUrl = _queueUrl,
-                WaitTimeSeconds = 20
+                WaitTimeSeconds = 20,
+                MaxNumberOfMessages = 10
             });
             await messageTask.ConfigureAwait(messageTask.IsCompleted);
             
             return messageTask.Result.Messages;
         }
 
-        public DeleteQueueRequest DeleteQueue()
+        private DeleteQueueRequest DeleteQueue()
         {
-            DeleteQueueRequest deleteQueue = new DeleteQueueRequest(_queueUrl);
-            return deleteQueue;
+            return new DeleteQueueRequest(_queueUrl);
         }
-        
-        
+
+        private UnsubscribeRequest UnsubscribeQueue()
+        {
+            return new UnsubscribeRequest(_queueUrl);
+        }
+        public void Dispose()
+        {
+            UnsubscribeQueue();
+            DeleteQueue();
+        }
     }
 }

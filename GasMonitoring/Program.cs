@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Amazon.SQS.Model;
 using GasMonitoring.AWS;
@@ -14,36 +15,10 @@ namespace GasMonitoring
         static async Task Main(string[] args)
         {
             var setCredentials = new SetUpCredentials.Credentials(){BucketName = "gasmonitoring-locationss3bucket-pgef0qqmgwba", FileName = "locations.json", TopicArn = "arn:aws:sns:eu-west-2:099421490492:GasMonitoring-snsTopicSensorDataPart1-1YOM46HA51FB"};
-            SetUpConnections setUpConnections = new SetUpConnections();
-            List<Location> locations = new List<Location>();
-            List<Message> messages = new List<Message>();
-            List<Reading> readings = new List<Reading>();
-            var locationsFetcher = new LocationsFetcher();
-            Console.Write($"There are {locations.Count} locations and {messages.Count} messages in the list.");
-
-            var locationsTask = await locationsFetcher.FetchLocations(setUpConnections.S3Client, setCredentials.BucketName, setCredentials.FileName);
-            var locNumber = 1;
-            foreach (var location in locationsTask)
-            {
-                location.Name = $"Loc {locNumber}";
-                locations.Add(location);
-                Console.WriteLine(location.Name);
-                Console.WriteLine(location.Id);
-                Console.WriteLine(location.X);
-                Console.WriteLine(location.Y);
-                locNumber += 1;
-            }
-            var messageFetcher = new MessageFetcher(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
-            var messageTask = await messageFetcher.FetchMessages(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
-            MessageParser messageParser = new MessageParser();
-            foreach (var message in messageTask)
-            {
-               var reading =  messageParser.ParseMessage(message);
-               readings.Add(reading);
-               messages.Add(message);
-            }
-            // messageFetcher.DeleteQueue();
-            Console.WriteLine($"There are {locations.Count} locations and {messages.Count} messages in the list.");
+            var setUpConnections = new SetUpConnections();
+            var displayValidMessages = new DisplayValidMessages();
+            await displayValidMessages.PrintStream(setUpConnections.S3Client, setCredentials.BucketName, setCredentials.FileName, setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
+            
         }
      
     }

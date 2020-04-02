@@ -2,7 +2,8 @@
  using System.IO;
  using System.Threading.Tasks;
  using Amazon.S3;
- using Newtonsoft.Json;
+using GasMonitoring.Readings;
+using Newtonsoft.Json;
 
  namespace GasMonitoring.AWS
  {

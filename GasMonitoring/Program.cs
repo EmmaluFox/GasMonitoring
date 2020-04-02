@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Amazon.SQS.Model;
 using GasMonitoring.AWS;
+using GasMonitoring.Readings;
 
 
 namespace GasMonitoring
@@ -16,6 +17,7 @@ namespace GasMonitoring
             SetUpConnections setUpConnections = new SetUpConnections();
             List<Location> locations = new List<Location>();
             List<Message> messages = new List<Message>();
+            List<Reading> readings = new List<Reading>();
             var locationsFetcher = new LocationsFetcher();
             Console.Write($"There are {locations.Count} locations and {messages.Count} messages in the list.");
 
@@ -33,12 +35,14 @@ namespace GasMonitoring
             }
             var messageFetcher = new MessageFetcher(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
             var messageTask = await messageFetcher.FetchMessages(setUpConnections.SqsClient, setUpConnections.SnsClient, setCredentials.TopicArn, setUpConnections.CreateQueueRequest);
+            MessageParser messageParser = new MessageParser();
             foreach (var message in messageTask)
             {
-                messages.Add(message);
-             Console.Write(message.Body);
+               var reading =  messageParser.ParseMessage(message);
+               readings.Add(reading);
+               messages.Add(message);
             }
-            messageFetcher.DeleteQueue();
+            // messageFetcher.DeleteQueue();
             Console.WriteLine($"There are {locations.Count} locations and {messages.Count} messages in the list.");
         }
      

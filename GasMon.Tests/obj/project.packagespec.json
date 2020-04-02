@@ -18,7 +18,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Training\\GasMonitoring\\GasMonitoring\\GasMonitoring.csproj": {
+            "projectPath": "C:\\Training\\GasMonitoring\\GasMonitoring\\GasMonitoring.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
